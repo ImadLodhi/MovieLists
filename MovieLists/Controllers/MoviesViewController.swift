@@ -24,7 +24,6 @@ class MoviesViewController: UITableViewController {
         }
         
         filteredMovies = movies
-        setUpSearchBar()
         
     }
     
@@ -49,10 +48,6 @@ extension MoviesViewController {
 }
 
 extension MoviesViewController: UISearchBarDelegate {
-    
-    private func setUpSearchBar() {
-        searchBar.delegate = self
-    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard !searchText.isEmpty else {
